@@ -1,0 +1,84 @@
+$date
+	Mon Oct 14 09:20:43 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_decode $end
+$var wire 1 ! is_u $end
+$var wire 1 " is_s $end
+$var wire 1 # is_r $end
+$var wire 1 $ is_j $end
+$var wire 1 % is_i $end
+$var wire 1 & is_b $end
+$var wire 1 ' incorrect $end
+$var reg 32 ( instruction [31:0] $end
+$scope module uut $end
+$var wire 32 ) instruction [31:0] $end
+$var reg 1 ' incorrect $end
+$var reg 1 & is_b $end
+$var reg 1 % is_i $end
+$var reg 1 $ is_j $end
+$var reg 1 # is_r $end
+$var reg 1 " is_s $end
+$var reg 1 ! is_u $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10010000101010011010100100100 )
+b10010000101010011010100100100 (
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#1
+1'
+b11000000100010010101111010000001 (
+b11000000100010010101111010000001 )
+#2
+1'
+b10000100100001001101011000001001 (
+b10000100100001001101011000001001 )
+#3
+1&
+0'
+b10110001111100000101011001100011 (
+b10110001111100000101011001100011 )
+#4
+1'
+0&
+b110101110010111101100001101 (
+b110101110010111101100001101 )
+#5
+1'
+b1000110110111111001100110001101 (
+b1000110110111111001100110001101 )
+#6
+1'
+b10110010110000101000010001100101 (
+b10110010110000101000010001100101 )
+#7
+1'
+b10001001001101110101001000010010 (
+b10001001001101110101001000010010 )
+#8
+1'
+b111100111110001100000001 (
+b111100111110001100000001 )
+#9
+1'
+b110110101111100110100001101 (
+b110110101111100110100001101 )
+#10

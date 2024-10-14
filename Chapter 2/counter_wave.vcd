@@ -1,0 +1,158 @@
+$date
+	Tue Oct  8 08:42:30 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module rec_calc_tb $end
+$var wire 17 ! result [16:0] $end
+$var reg 1 " clk $end
+$var reg 4 # op [3:0] $end
+$var reg 1 $ reset $end
+$var reg 17 % valA [16:0] $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 4 & op [3:0] $end
+$var wire 1 $ reset $end
+$var wire 17 ' result [16:0] $end
+$var wire 17 ( valA [16:0] $end
+$var reg 17 ) out [16:0] $end
+$var reg 17 * valB [16:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx *
+bx )
+b0 (
+bx '
+b0 &
+b0 %
+1$
+b0 #
+0"
+bx !
+$end
+#5
+b0 !
+b0 '
+b0 )
+b0 *
+1"
+#10
+0"
+b1 %
+b1 (
+0$
+#15
+b1 !
+b1 '
+b1 )
+1"
+#20
+0"
+#25
+b1 *
+1"
+#30
+0"
+b10 %
+b10 (
+#35
+b11 !
+b11 '
+b11 )
+1"
+#40
+0"
+#45
+b11 *
+1"
+#50
+0"
+#55
+b101 !
+b101 '
+b101 )
+1"
+#60
+0"
+#65
+b101 *
+1"
+#70
+0"
+#75
+b111 !
+b111 '
+b111 )
+1"
+#80
+0"
+#85
+b111 *
+1"
+#90
+0"
+#95
+b1001 !
+b1001 '
+b1001 )
+1"
+#100
+0"
+#105
+b1001 *
+1"
+#110
+0"
+#115
+b1011 !
+b1011 '
+b1011 )
+1"
+#120
+0"
+#125
+b1011 *
+1"
+#130
+0"
+#135
+b1101 !
+b1101 '
+b1101 )
+1"
+#140
+0"
+#145
+b1101 *
+1"
+#150
+0"
+#155
+b1111 !
+b1111 '
+b1111 )
+1"
+#160
+0"
+#165
+b1111 *
+1"
+#170
+0"
+#175
+b10001 !
+b10001 '
+b10001 )
+1"
+#180
+0"
