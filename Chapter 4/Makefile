@@ -9,6 +9,9 @@ i_mem: i_mem.sv tb_i_mem.sv
 decode: decode.sv tb_decode.sv
 	iverilog -g2012 -o tb_decode.vvp tb_decode.sv
 
+register_file: register_file.sv tb_register_file.sv
+	iverilog -g2012 -o tb_register_file.vvp tb_register_file.sv
+
 clean:
 	rm -rf *.vvp *.vcd
 

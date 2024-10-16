@@ -18,7 +18,9 @@ module tb_decode();
   initial begin
     // Generate 10 random instructions
     repeat (10) begin
-      instruction = $random;
+      instruction = 32'h00010463;
+      #1;
+      instruction = 32'h01010113;
       #1;
     end
   end
