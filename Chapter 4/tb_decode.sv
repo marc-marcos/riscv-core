@@ -2,16 +2,21 @@
 
 module tb_decode();
   reg [31:0] instruction;
-  wire is_b, is_i, is_j, is_r, is_s, is_u, incorrect;
+  wire is_add, is_addi, is_beq, is_bne, is_blt, is_bge, is_bltu, is_bgeu, incorrect;
   
   decode uut (
     .instruction(instruction), 
-    .is_b(is_b),
-    .is_i(is_i),
-    .is_j(is_j),
-    .is_r(is_r),
-    .is_s(is_s),
-    .is_u(is_u),
+    .rd(rd),
+    .rs1(rs1),
+    .rs2(rs2),
+    .is_add(is_add),
+    .is_addi(is_addi),
+    .is_beq(is_beq), 
+    .is_bne(is_bne),
+    .is_blt(is_blt), 
+    .is_bge(is_bge), 
+    .is_bltu(is_bltu),
+    .is_bgeu(is_bgeu),
     .incorrect(incorrect)
   );
 
