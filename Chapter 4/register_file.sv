@@ -26,10 +26,6 @@ module register_file(
     data_internal2 <= 32'b0;
   end
 
-  always_ff @(posedge wr_en) begin
-    internal[wr_addr] <= wr_data;
-  end
-
   always @(*) begin
     if (rd_en1) begin
       data_internal1 = internal[rd_addr1];
@@ -37,6 +33,10 @@ module register_file(
 
     if (rd_en2) begin
       data_internal2 = internal[rd_addr2];
+    end
+
+    if (wr_en) begin
+      internal[wr_addr] = wr_data;
     end
   end
 

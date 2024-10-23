@@ -14,7 +14,7 @@ module i_mem(
 
   // memory initialization
 
-  initial begin
+  always_comb begin
     $readmemh("hex_dump.bin", internal);
   end
 

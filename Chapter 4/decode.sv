@@ -1,5 +1,6 @@
 module decode(
   input [31:0] instruction,
+  output reg [31:0] imm,
   output reg [4:0] rd,
   output reg [4:0] rs1,
   output reg [4:0] rs2,
@@ -7,15 +8,22 @@ module decode(
   output reg is_add,
   output reg is_addi,
   output reg is_beq, 
-  output reg is_bne,
-  output reg is_blt, 
   output reg is_bge, 
+  output reg is_bgeu,
+  output reg is_blt, 
   output reg is_bltu,
-  output reg is_bgeu
+  output reg is_bne,
+  output reg valid_rd, 
+  output reg valid_rs1, 
+  output reg valid_rs2, 
+  output reg valid_imm
   );
 
-  logic funct7, funct3, opcode, imm, dec_bits;
-  logic valid_funct3, valid_rd, valid_rs1, valid_rs2, valid_imm;
+  logic funct7; 
+  logic [2:0] funct3;
+  logic [6:0] opcode;
+  logic [10:0] dec_bits;
+  logic valid_funct3;
   logic is_b, is_i, is_j, is_r, is_s, is_u;
 
   always_comb begin

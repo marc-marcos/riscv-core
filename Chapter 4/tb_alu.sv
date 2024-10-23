@@ -1,7 +1,7 @@
 `include "alu.sv"
 
 module tb_alu();
-  reg [31:0] op1, op2, imm;
+  reg [31:0] op1, op2;
   reg reset;
   wire [31:0] result;
   reg is_addi, is_add;
@@ -9,7 +9,6 @@ module tb_alu();
   alu alu_inst(
     .op1(op1),
     .op2(op2),
-    .imm(imm),
     .is_addi(is_addi),
     .is_add(is_add),
     .reset(reset),
@@ -19,7 +18,6 @@ module tb_alu();
   initial begin
     op1 = 32'h00000000;
     op2 = 32'h00000000;
-    imm = 32'h00000000;
     is_addi = 1'b0;
     is_add = 1'b0;
     reset = 1'b1;
@@ -31,7 +29,6 @@ module tb_alu();
     #1;
     op1 = 32'h00000001;
     op2 = 32'h00000002;
-    imm = 32'h00000002;
     is_addi = 1'b1;
     is_add = 1'b0;
     #1;
