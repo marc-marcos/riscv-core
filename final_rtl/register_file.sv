@@ -26,7 +26,7 @@ module register_file(
     data_internal2 <= 32'b0;
   end
 
-  always @(*) begin
+  always_comb begin
     if (rd_en1) begin
       data_internal1 = internal[rd_addr1];
     end

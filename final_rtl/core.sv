@@ -23,7 +23,7 @@ end
 // PC 
 logic [31:0] data;
 logic [31:0] pc_out;
-logic choice_pc;
+logic [1:0] choice_pc;
 
 pc pc_inst(
   .pc_out(pc_out),
@@ -65,7 +65,7 @@ decode decode_inst(
 );
 
 // REGFILE 
-logic output_reg1, output_reg2;
+logic [31:0] output_reg1, output_reg2;
 
 register_file regfile_inst(
   .reset(reset),
