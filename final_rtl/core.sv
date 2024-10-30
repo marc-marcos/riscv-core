@@ -70,6 +70,7 @@ logic [31:0] output_reg1, output_reg2;
 register_file regfile_inst(
   .reset(reset),
   .wr_en(valid_rd),
+  .clk(clk),
   .wr_addr(rd), 
   .wr_data(result_alu), // Este es el resultado de la ALU
   .rd_en1(valid_rs1),
