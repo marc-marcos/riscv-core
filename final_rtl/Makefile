@@ -6,6 +6,9 @@ pc: pc.sv tb_pc.sv
 i_mem: i_mem.sv tb_i_mem.sv
 	iverilog -g2012 -o tb_i_mem.vvp tb_i_mem.sv
 
+d_mem: d_mem.sv tb_d_mem.sv
+	iverilog -g2012 -o tb_d_mem.vvp tb_d_mem.sv
+
 decode: decode.sv tb_decode.sv
 	iverilog -g2012 -o tb_decode.vvp tb_decode.sv
 

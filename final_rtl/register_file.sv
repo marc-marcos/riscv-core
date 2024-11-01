@@ -17,25 +17,25 @@ module register_file(
   logic [31:0] data_internal1;
   logic [31:0] data_internal2;
 
-  always_ff @(posedge clk) begin
+  always_comb begin
     if (reset) begin
       integer i;
       for (i = 0; i < 32; i = i + 1) begin
-        internal[i] <= 32'b0;
+        internal[i] = 32'b0;
       end
-      data_internal1 <= 32'b0;
-      data_internal2 <= 32'b0;
+      data_internal1 = 32'b0;
+      data_internal2 = 32'b0;
     end else begin
       if (rd_en1) begin
-        data_internal1 <= internal[rd_addr1];
+        data_internal1 = internal[rd_addr1];
       end
 
       if (rd_en2) begin
-        data_internal2 <= internal[rd_addr2];
+        data_internal2 = internal[rd_addr2];
       end
 
       if (wr_en) begin
-        internal[wr_addr] <= wr_data;
+        internal[wr_addr] = wr_data;
       end
     end
   end

@@ -2,6 +2,8 @@ module pc(
     output [31:0] pc_out,
     input reset,
     input clk,
+    input [31:0] branch_target,
+    input [31:0] register_jump_target, 
     input [1:0] choice
   );
 
@@ -14,8 +16,8 @@ module pc(
     else begin
       case (choice)
       2'b00: pc_value <= pc_value + 1;
-      2'b01: pc_value <= pc_value;
-      2'b10: pc_value <= pc_value;
+      2'b01: pc_value <= branch_target;
+      2'b10: pc_value <= register_jump_target;
       2'b11: pc_value <= 0;
       endcase
     end

@@ -44,6 +44,9 @@ module tb_register_file();
     #2;
 
     reset = 0;
+    wr_en = 1;
+    wr_addr = 1;
+    wr_data = 32'hbeefdead;
 
     #2;
 
@@ -58,6 +61,14 @@ module tb_register_file();
     rd_addr1 = 0;
     rd_en2 = 1;
     rd_addr2 = 0;
+
+    #2;
+
+    wr_en = 0;
+    rd_en1 = 1;
+    rd_addr1 = 0;
+    rd_en2 = 1;
+    rd_addr2 = 1;
 
     #10;
     $finish;
